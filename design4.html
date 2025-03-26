@@ -2,24 +2,23 @@
 
 <html lang="ar">
 <head>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YB8D7PR8W7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){{ dataLayer.push(arguments); }}
-  gtag('js', new Date());
-  gtag('config', 'G-YB8D7PR8W7');
-</script>
-
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-YB8D7PR8W7"></script>
+
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YB8D7PR8W7');
+function updateShareLinks(imageUrl) {
+  const xLink = document.getElementById("twitterShare");
+  const whatsappLink = document.getElementById("whatsappShare");
+
+  if (xLink) {
+    xLink.href = `https://twitter.com/intent/tweet?text=بطاقتي%20لعيد%20الفطر%20مع%20%23فضاء_السكري_النوع_الأول%20🎉%0A%23السكري_النوع_الأول%20%23عيد_مبارك%0A@T1D_sa%20@T1D_Space&url=${encodeURIComponent(imageUrl)}`;
+  }
+  if (whatsappLink) {
+    whatsappLink.href = `https://api.whatsapp.com/send?text=بطاقتي%20لعيد%20الفطر%20مع%20%23فضاء_السكري_النوع_الأول%20🎉%0A%23السكري_النوع_الأول%20%23عيد_مبارك%0A@T1D_sa%20@T1D_Space%0A${encodeURIComponent(imageUrl)}`;
+  }
+}
 </script>
+
 <meta charset="utf-8"/>
 <title>تصميم 4</title>
 <link href="style.css" rel="stylesheet"/>
