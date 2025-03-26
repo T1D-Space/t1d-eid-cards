@@ -16,7 +16,9 @@
 </head>
 <body>
 <h1>اكتب اسمك واختر الخط</h1>
-<input id="nameInput" placeholder="اكتب اسمك هنا" type="text"/><br/><br/>
+<input id="nameInput"
+placeholder="اكتب اسمك هنا"/><br/><br/>
+<label>اكتب التهنئة:</label><input id="greetingInput" placeholder="مثال: عيدكم مبارك" placeholder="اكتب اسمك هنا" type="text"/><br/><br/>
 <label>اختر الخط:</label>
 <select id="fontSelect">
 <option value="Amiri">Amiri</option>
@@ -24,13 +26,25 @@
 <option value="Tajawal">Tajawal</option>
 </select>
 <br/><br/>
-<button onclick="generateImage(5); showShareInstructions();">عرض البطاقة</button>
+<div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+<button onclick="generateImage(5);">عرض البطاقة</button>
+<a class="button" href="index.html">↩ العودة للرئيسية</a>
+</div>
 <a class="button" href="index.html">↩ العودة للرئيسية</a>
 <br/><br/>
 <canvas height="600" id="canvas" width="800"></canvas>
+<div id="shareInstructions" style="display:none; margin-top: 20px; text-align: center;">
+<p>📌 <strong>انسخ الصورة التالية والصقها في منصة X أو واتساب مع هذا النص:</strong></p>
+<textarea rows="4" style="width:90%; max-width:500px; direction:rtl; font-family: Tajawal;">
+بطاقتي لعيد الفطر مع #فضاء_السكري_النوع_الأول 🎉
+#السكري_النوع_الأول #عيد_مبارك
+@T1D_sa @T1D_Space
+  </textarea>
+</div>
 
+<br/>
 <a class="button" download="بطاقة_العيد.png" id="downloadBtn" style="display:none;">تحميل البطاقة</a>
-
+<div id="sharingButtons" style="display:none;"></div>
 
 <script>
 function showShareInstructions() {
@@ -46,6 +60,14 @@ function showShareInstructions() {
 <img alt="جمعية السكري النوع الأول" src="images/logo-t1d-small.png" style="height: 60px; margin: 10px;"/><br/>
 <small style="color: #888;">© 2025 جمعية السكري النوع الأول - فضاء السكري النوع الأول</small>
 </div>
-
+<script>
+function updateShareLinks() {
+  const pageUrl = window.location.href;
+  const message = encodeURIComponent(`بطاقتي لعيد الفطر مع #فضاء_السكري_النوع_الأول 🎉\n#السكري_النوع_الأول #عيد_مبارك\n@T1D_sa @T1D_Space`);
+  document.getElementById("xShare").href = `https://twitter.com/intent/tweet?text=${message}%0A${encodeURIComponent(pageUrl)}`;
+  document.getElementById("whatsappShare").href = `https://wa.me/?text=${message}%0A${encodeURIComponent(pageUrl)}`;
+}
+window.onload = updateShareLinks;
+</script>
 </body>
 </html>
