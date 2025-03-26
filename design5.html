@@ -16,9 +16,7 @@
 </head>
 <body>
 <h1>اكتب اسمك واختر الخط</h1>
-<input id="nameInput"
-placeholder="اكتب اسمك هنا"/><br/><br/>
-<label>اكتب التهنئة:</label><input id="greetingInput" placeholder="مثال: عيدكم مبارك" placeholder="اكتب اسمك هنا" type="text"/><br/><br/>
+<input id="nameInput" placeholder="اكتب اسمك هنا" type="text"/><br/><br/>
 <label>اختر الخط:</label>
 <select id="fontSelect">
 <option value="Amiri">Amiri</option>
@@ -26,10 +24,7 @@ placeholder="اكتب اسمك هنا"/><br/><br/>
 <option value="Tajawal">Tajawal</option>
 </select>
 <br/><br/>
-<div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
-<button onclick="generateImage(5);">عرض البطاقة</button>
-<a class="button" href="index.html">↩ العودة للرئيسية</a>
-</div>
+<button onclick="generateImage(5); showShareInstructions();">عرض البطاقة</button>
 <a class="button" href="index.html">↩ العودة للرئيسية</a>
 <br/><br/>
 <canvas height="600" id="canvas" width="800"></canvas>
@@ -44,7 +39,7 @@ placeholder="اكتب اسمك هنا"/><br/><br/>
 
 <br/>
 <a class="button" download="بطاقة_العيد.png" id="downloadBtn" style="display:none;">تحميل البطاقة</a>
-<div id="sharingButtons" style="display:none;"></div>
+
 
 <script>
 function showShareInstructions() {
@@ -61,7 +56,7 @@ function showShareInstructions() {
 <small style="color: #888;">© 2025 جمعية السكري النوع الأول - فضاء السكري النوع الأول</small>
 </div>
 <script>
-function updateShareLinks() {
+function noop() {
   const pageUrl = window.location.href;
   const message = encodeURIComponent(`بطاقتي لعيد الفطر مع #فضاء_السكري_النوع_الأول 🎉\n#السكري_النوع_الأول #عيد_مبارك\n@T1D_sa @T1D_Space`);
   document.getElementById("xShare").href = `https://twitter.com/intent/tweet?text=${message}%0A${encodeURIComponent(pageUrl)}`;

@@ -39,7 +39,7 @@
 
 <br/>
 <a class="button" download="بطاقة_العيد.png" id="downloadBtn" style="display:none;">تحميل البطاقة</a>
-<div id="sharingButtons" style="display:none;"></div>
+
 
 <script>
 function showShareInstructions() {
@@ -56,7 +56,7 @@ function showShareInstructions() {
 <small style="color: #888;">© 2025 جمعية السكري النوع الأول - فضاء السكري النوع الأول</small>
 </div>
 <script>
-function updateShareLinks() {
+function noop() {
   const pageUrl = window.location.href;
   const message = encodeURIComponent(`بطاقتي لعيد الفطر مع #فضاء_السكري_النوع_الأول 🎉\n#السكري_النوع_الأول #عيد_مبارك\n@T1D_sa @T1D_Space`);
   document.getElementById("xShare").href = `https://twitter.com/intent/tweet?text=${message}%0A${encodeURIComponent(pageUrl)}`;
