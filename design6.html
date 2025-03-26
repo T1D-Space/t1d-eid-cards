@@ -1,68 +1,48 @@
 <!DOCTYPE html>
-
 <html lang="ar">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-YB8D7PR8W7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YB8D7PR8W7');
-</script>
-<meta charset="utf-8"/>
-<title>تصميم 5</title>
-<link href="style.css" rel="stylesheet"/>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YB8D7PR8W7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YB8D7PR8W7');
+  </script>
+  <meta charset="utf-8"/>
+  <title>تصميم 6</title>
+  <link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-<h1>اكتب اسمك واختر الخط</h1>
-<input id="nameInput" placeholder="اكتب اسمك هنا" type="text"/><br/><br/>
-<label>اختر الخط:</label>
-<select id="fontSelect">
-<option value="Amiri">Amiri</option>
-<option selected="" value="Cairo">Cairo</option>
-<option value="Tajawal">Tajawal</option>
-</select>
-<br/><br/>
-<button onclick="generateImage(5); showShareInstructions();">عرض البطاقة</button>
-<a class="button" href="index.html">↩ العودة للرئيسية</a>
-<br/><br/>
-<canvas height="600" id="canvas" width="800"></canvas>
-<div id="shareInstructions" style="display:none; margin-top: 20px; text-align: center;">
-<p>📌 <strong>انسخ الصورة التالية والصقها في منصة X أو واتساب مع هذا النص:</strong></p>
-<textarea rows="4" style="width:90%; max-width:500px; direction:rtl; font-family: Tajawal;">
-بطاقتي لعيد الفطر مع #فضاء_السكري_النوع_الأول 🎉
-#السكري_النوع_الأول #عيد_مبارك
-@T1D_sa @T1D_Space
-  </textarea>
-</div>
+  <h1>اكتب اسمك واختر الخط</h1>
+  <input id="nameInput" placeholder="اكتب اسمك هنا" type="text"/><br/><br/>
 
-<br/>
-<a class="button" download="بطاقة_العيد.png" id="downloadBtn" style="display:none;">تحميل البطاقة</a>
+  <label>اختر الخط:</label>
+  <select id="fontSelect">
+    <option value="Amiri">Amiri</option>
+    <option selected value="Cairo">Cairo</option>
+    <option value="Tajawal">Tajawal</option>
+  </select>
+  <br/><br/>
 
+  <button onclick="generateImage(6)">عرض البطاقة</button>
+  <a class="button" href="index.html">↩ العودة للرئيسية</a>
 
-<script>
-function showShareInstructions() {
-  document.getElementById('shareInstructions').style.display = 'block';
-}
-</script>
-<script defer="" src="js/main.js"></script>
-<div style="margin-top: 20px;">
-<img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fabutmim.github.io%2Ft1d-eid-cards%2Fdesign5.html&amp;count_bg=%23006699&amp;title_bg=%23000000&amp;icon=github.svg&amp;title=الزيارات&amp;edge_flat=false"/>
-</div>
-<div style="margin-top: 40px; text-align: center;">
-<img alt="فضاء السكري النوع الأول" src="images/logo-fadaa-small.png" style="height: 50px; margin: 10px;"/>
-<img alt="جمعية السكري النوع الأول" src="images/logo-t1d-small.png" style="height: 60px; margin: 10px;"/><br/>
-<small style="color: #888;">© 2025 جمعية السكري النوع الأول - فضاء السكري النوع الأول</small>
-</div>
-<script>
-function noop() {
-  const pageUrl = window.location.href;
-  const message = encodeURIComponent(`بطاقتي لعيد الفطر مع #فضاء_السكري_النوع_الأول 🎉\n#السكري_النوع_الأول #عيد_مبارك\n@T1D_sa @T1D_Space`);
-  document.getElementById("xShare").href = `https://twitter.com/intent/tweet?text=${message}%0A${encodeURIComponent(pageUrl)}`;
-  document.getElementById("whatsappShare").href = `https://wa.me/?text=${message}%0A${encodeURIComponent(pageUrl)}`;
-}
-window.onload = updateShareLinks;
-</script>
+  <br/><br/>
+  <canvas id="canvas" width="800" height="600"></canvas>
+  <br/>
+  <a class="button" id="downloadBtn" download="بطاقة_العيد.png" style="display:none;">تحميل البطاقة</a>
+
+  <script defer src="js/main.js"></script>
+
+  <div style="margin-top: 20px;">
+    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fabutmim.github.io%2Ft1d-eid-cards%2Fdesign6.html&amp;count_bg=%23006699&amp;title_bg=%23000000&amp;icon=github.svg&amp;title=الزيارات&amp;edge_flat=false"/>
+  </div>
+
+  <div style="margin-top: 40px; text-align: center;">
+    <img src="images/logo-fadaa-small.png" alt="فضاء السكري النوع الأول" style="height: 50px; margin: 10px;"/>
+    <img src="images/logo-t1d-small.png" alt="جمعية السكري النوع الأول" style="height: 60px; margin: 10px;"/><br/>
+    <small style="color: #888;">© 2025 جمعية السكري النوع الأول - فضاء السكري النوع الأول</small>
+  </div>
 </body>
 </html>
