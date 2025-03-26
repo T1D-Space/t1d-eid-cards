@@ -1,1 +1,1 @@
-<!-- Dummy content for js/main.js -->
+<!-- محتوى مبدئي لـ js/main.js -->
