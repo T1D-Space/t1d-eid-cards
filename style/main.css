@@ -1,0 +1,30 @@
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: #fafafa;
+    color: #003366;
+    text-align: center;
+}
+.container {
+    padding: 20px;
+}
+.logo {
+    height: 60px;
+    margin: 10px;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.cards a {
+    text-decoration: none;
+    color: #003366;
+}
+.cards img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
